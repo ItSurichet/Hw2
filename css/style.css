@@ -157,3 +157,10 @@ footer {
         opacity: 1;
     }
 }
+    .card-text {
+        color: white;
+        display: block !important;
+        visibility: visible !important;
+    }
+
+
