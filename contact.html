@@ -1,27 +1,41 @@
 <!DOCTYPE html>
 <html lang="th">
-    <head>
-        ...
-        <style>
-            .modal-dialog {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                min-height: 100vh;
-            }
-            .modal-content {
-                max-width: 500px; 
-                margin: auto; 
-            }
-        </style>
-        ...
-    </head>
-    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ติดต่อเรา</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .modal-dialog {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .modal-content {
+            max-width: 500px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .modal-header {
+            background: #007bff;
+            color: #fff;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .modal-body {
+            background: #f8f9fa;
+        }
+
+        .modal-footer {
+            background: #e9ecef;
+        }
+    </style>
 </head>
 <body>
     <header class="bg-dark text-light p-3">
@@ -34,7 +48,7 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="places.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -43,18 +57,17 @@
     <main class="container py-5">
         <h1 class="text-center mb-4">ติดต่อเรา</h1>
         <div class="text-center">
-          
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal">
                 เปิดฟอร์มติดต่อ
             </button>
         </div>
 
-       
+        <!-- Modal -->
         <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="contactModalLabel">ฟอร์มติดต่อ</h5>
+                        <h5 class="modal-title w-100" id="contactModalLabel">ฟอร์มติดต่อ</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -75,8 +88,11 @@
                                 <label for="message" class="form-label">ข้อความ</label>
                                 <textarea class="form-control" id="message" rows="3" placeholder="กรอกข้อความ" required></textarea>
                             </div>
-                            <button type="submit" class="btn btn-success">ส่งข้อความ</button>
+                            <button type="submit" class="btn btn-success w-100">ส่งข้อความ</button>
                         </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
                     </div>
                 </div>
             </div>
