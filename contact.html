@@ -4,34 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ติดต่อเรา</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">หน้าแรก</a></li>
-                <li><a href="places.html">สถานที่ท่องเที่ยว</a></li>
-                <li><a href="contact.html">ติดต่อเรา</a></li>
-            </ul>
+    <header class="bg-dark text-light p-3">
+        <nav class="container navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="#">จันทบุรี</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">หน้าแรก</a></li>
+                    <li class="nav-item"><a class="nav-link" href="places.html">สถานที่ท่องเที่ยว</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">ติดต่อเรา</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
-    <main>
-        <h1>ติดต่อเรา</h1>
-        <form>
-            <label for=" name ">ชื่อ-นามสกุล:</label>
-            <input type=" text " id="name" required>
-            <label for=" email ">อีเมล:</label>
-            <input type=" email " id="email" required>
-            <label for=" phone ">เบอร์โทรศัพท์:</label>
-            <input type=" tel " id="phone">
-            <label for=" message ">ข้อความ:</label>
-            <textarea id=" message " required></textarea>
-            <button type=" submit ">ส่งข้อความ</button>
-        </form>
+
+    <main class="container py-5">
+        <h1 class="text-center mb-4">ติดต่อเรา</h1>
+        <div class="text-center">
+            <!-- Button to trigger modal -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal">
+                เปิดฟอร์มติดต่อ
+            </button>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="contactModalLabel">ฟอร์มติดต่อ</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">ชื่อ-นามสกุล</label>
+                                <input type="text" class="form-control" id="name" placeholder="กรอกชื่อ-นามสกุล" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">อีเมล</label>
+                                <input type="email" class="form-control" id="email" placeholder="กรอกอีเมล" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">เบอร์โทรศัพท์</label>
+                                <input type="tel" class="form-control" id="phone" placeholder="กรอกเบอร์โทรศัพท์">
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">ข้อความ</label>
+                                <textarea class="form-control" id="message" rows="3" placeholder="กรอกข้อความ" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-success">ส่งข้อความ</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
-    <footer>
+
+    <footer class="bg-dark text-light text-center py-3">
         <p>&copy; 2024 จังหวัดจันทบุรี</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
