@@ -7,19 +7,81 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Arial', sans-serif; line-height: 1.6; color: #fff; background-color: #000; overflow-x: hidden; }
-        header { background: rgba(0, 0, 0, 0.8); color: #FFD700; padding: 1rem 0; position: sticky; top: 0; z-index: 1000; }
-        header .container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
-        header h1 { font-size: 1.8rem; }
-        nav ul { list-style: none; display: flex; }
-        nav ul li { margin-left: 1rem; }
-        nav ul li a { color: #fff; text-decoration: none; padding: 0.5rem 1rem; transition: all 0.3s ease; }
-        nav ul li a:hover, nav ul li a.active { color: #FFD700; border-bottom: 2px solid #FFD700; }
-        footer { background: #111; color: #aaa; text-align: center; padding: 1rem; }
-        .card-body { color: #000; }
-        .card-title { color: #000; }
-        .card-text { color: #000; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #fff;
+            background-color: #000;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            color: #FFD700;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 1rem;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            color: #FFD700;
+            border-bottom: 2px solid #FFD700;
+        }
+
+        footer {
+            background: #111;
+            color: #aaa;
+            text-align: center;
+            padding: 1rem;
+        }
+        .card-body {
+        color: #000;  
+        }
+
+        .card-title {
+        color: #000; 
+        }
+
+         .card-text {
+         color: #000;  
+        }
     </style>
 </head>
 <body>
@@ -61,7 +123,61 @@
                     </div>
                 </div>
             </div>
-            <!-- More cards here as per your content -->
+            <div class="col">
+                <div class="card">
+                    <img src="images/place3.jpg" class="card-img-top" alt="หาดเจ้าหลาว">
+                    <div class="card-body">
+                        <h5 class="card-title">หาดเจ้าหลาว</h5>
+                        <p class="card-text">ชายหาดที่เงียบสงบ น้ำใสสะอาด เหมาะแก่การพักผ่อนริมทะเล</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="images/place4.jpg" class="card-img-top" alt="ชุมชนริมน้ำจันทบูร">
+                    <div class="card-body">
+                        <h5 class="card-title">ชุมชนริมน้ำจันทบูร</h5>
+                        <p class="card-text">แหล่งท่องเที่ยวเชิงวัฒนธรรมพร้อมร้านค้าและของฝากพื้นเมือง</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="images/place5.jpg" class="card-img-top" alt="ศาลสมเด็จพระเจ้าตากสิน">
+                    <div class="card-body">
+                        <h5 class="card-title">ศาลสมเด็จพระเจ้าตากสิน</h5>
+                        <p class="card-text">สถานที่ศักดิ์สิทธิ์เพื่อรำลึกถึงพระเจ้าตากสินมหาราช</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="images/place6.jpg" class="card-img-top" alt="สวนผลไม้">
+                    <div class="card-body">
+                        <h5 class="card-title">สวนผลไม้</h5>
+                        <p class="card-text">แหล่งผลไม้สดและอร่อย มีทุเรียน มังคุด และเงาะให้เลือกชิม</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="images/place7.jpg" class="card-img-top" alt="คุกขี้ไก่">
+                    <div class="card-body">
+                        <h5 class="card-title">คุกขี้ไก่</h5>
+                        <p class="card-text">แหล่งประวัติศาสตร์ในยุคสมัยกรุงธนบุรี เป็นคุกที่มีเรื่องราวน่าสนใจ</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="images/place8.jpg" class="card-img-top" alt="เขาคิชฌกูฏ">
+                    <div class="card-body">
+                        <h5 class="card-title">เขาคิชฌกูฏ</h5>
+                        <p class="card-text">สถานที่ศักดิ์สิทธิ์สำหรับการแสวงบุญ พร้อมทิวทัศน์ที่งดงาม</p>
+                    </div>
+                </div>
+            </div>
+            
         </div>
     </section>
 
