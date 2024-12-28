@@ -4,7 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>สถานที่ท่องเที่ยว</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f4f4f4;
+            font-family: 'Arial', sans-serif;
+        }
+        header {
+            background-color: #343a40;
+            color: white;
+            padding: 10px 0;
+        }
+        header nav ul {
+            list-style-type: none;
+            text-align: center;
+        }
+        header nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+        header nav ul li a:hover {
+            color: #ffd700;
+        }
+        .place-card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .image-wrapper img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .place-card h2 {
+            font-size: 1.5rem;
+            padding: 15px;
+            color: #343a40;
+        }
+        .place-card p {
+            padding: 0 15px 15px;
+            color: #6c757d;
+        }
+        footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -17,79 +72,95 @@
         </nav>
     </header>
 
-    <main>
-        <h1>สถานที่ท่องเที่ยวแนะนำ</h1>
-        <div class="places-grid">
-            <article class="place-card">
-                <div class="image-wrapper">
-                    <img src="images/place1.jpg" alt="น้ำตกพลิ้ว">
+    <main class="container py-5">
+        <h1 class="text-center mb-4">สถานที่ท่องเที่ยวแนะนำ</h1>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+            <article class="col">
+                <div class="place-card">
+                    <div class="image-wrapper">
+                        <img src="images/place1.jpg" alt="น้ำตกพลิ้ว">
+                    </div>
+                    <h2>น้ำตกพลิ้ว</h2>
+                    <p>น้ำตกที่มีความสวยงามและเหมาะสำหรับการพักผ่อน ท่ามกลางธรรมชาติที่ชุ่มชื้นและปลาพลวงจำนวนมาก</p>
                 </div>
-                <h2>น้ำตกพลิ้ว</h2>
-                <p>น้ำตกที่มีความสวยงามและเหมาะสำหรับการพักผ่อน ท่ามกลางธรรมชาติที่ชุ่มชื้นและปลาพลวงจำนวนมาก</p>
-                <p>น้ำตกพลิ้วเป็นสถานที่ท่องเที่ยวที่ขึ้นชื่อในจันทบุรี ซึ่งเป็นแหล่งท่องเที่ยวที่ได้รับความนิยมจากนักท่องเที่ยวทั้งในประเทศและต่างประเทศ</p>
             </article>
 
-            <article class="place-card">
-                <div class="image-wrapper">
-                    <img src="images/place2.jpg" alt="โบสถ์คาทอลิกพระแม่ปฏิสนธินิรมล">
+            <article class="col">
+                <div class="place-card">
+                    <div class="image-wrapper">
+                        <img src="images/place2.jpg" alt="โบสถ์คาทอลิกพระแม่ปฏิสนธินิรมล">
+                    </div>
+                    <h2>โบสถ์คาทอลิกพระแม่ปฏิสนธินิรมล</h2>
+                    <p>โบสถ์คริสต์สไตล์โกธิคที่สวยงามและเก่าแก่ที่สุดในประเทศไทย โดดเด่นด้วยกระจกสีและสถาปัตยกรรมสุดอลังการ</p>
                 </div>
-                <h2>โบสถ์คาทอลิกพระแม่ปฏิสนธินิรมล</h2>
-                <p>โบสถ์คริสต์สไตล์โกธิคที่สวยงามและเก่าแก่ที่สุดในประเทศไทย โดดเด่นด้วยกระจกสีและสถาปัตยกรรมสุดอลังการ</p>
             </article>
 
-            <article class="place-card">
-                <div class="image-wrapper">
-                    <img src="images/place3.jpg" alt="หาดเจ้าหลาว">
+            <article class="col">
+                <div class="place-card">
+                    <div class="image-wrapper">
+                        <img src="images/place3.jpg" alt="หาดเจ้าหลาว">
+                    </div>
+                    <h2>หาดเจ้าหลาว</h2>
+                    <p>หาดทรายขาวสะอาด บรรยากาศเงียบสงบ เหมาะสำหรับการเล่นน้ำและทำกิจกรรมทางทะเล</p>
                 </div>
-                <h2>หาดเจ้าหลาว</h2>
-                <p>หาดทรายขาวสะอาด บรรยากาศเงียบสงบ เหมาะสำหรับการเล่นน้ำและทำกิจกรรมทางทะเล</p>
             </article>
 
-            <article class="place-card">
-                <div class="image-wrapper">
-                    <img src="images/place4.jpg" alt="ชุมชนเก่าริมน้ำจันทบูร">
+            <article class="col">
+                <div class="place-card">
+                    <div class="image-wrapper">
+                        <img src="images/place4.jpg" alt="ชุมชนเก่าริมน้ำจันทบูร">
+                    </div>
+                    <h2>ชุมชนเก่าริมน้ำจันทบูร</h2>
+                    <p>ชุมชนเก่าแก่ที่เต็มไปด้วยบ้านเรือนโบราณ ร้านค้าของฝาก และอาหารพื้นเมืองรสเลิศ</p>
                 </div>
-                <h2>ชุมชนเก่าริมน้ำจันทบูร</h2>
-                <p>ชุมชนเก่าแก่ที่เต็มไปด้วยบ้านเรือนโบราณ ร้านค้าของฝาก และอาหารพื้นเมืองรสเลิศ</p>
             </article>
 
-            <article class="place-card">
-                <div class="image-wrapper">
-                    <img src="images/place5.jpg" alt=" ศาลสมเด็จพระเจ้าตากสินมหาราช ">
+            <article class="col">
+                <div class="place-card">
+                    <div class="image-wrapper">
+                        <img src="images/place5.jpg" alt=" ศาลสมเด็จพระเจ้าตากสินมหาราช ">
+                    </div>
+                    <h2>ศาลสมเด็จพระเจ้าตากสินมหาราช</h2>
+                    <p>สถานที่ศักดิ์สิทธิ์ที่ชาวจันทบุรีเคารพบูชา เพื่อรำลึกถึงพระมหากรุณาธิคุณของสมเด็จพระเจ้าตากสินมหาราช</p>
                 </div>
-                <h2>ศาลสมเด็จพระเจ้าตากสินมหาราช</h2>
-                <p>สถานที่ศักดิ์สิทธิ์ที่ชาวจันทบุรีเคารพบูชา เพื่อรำลึกถึงพระมหากรุณาธิคุณของสมเด็จพระเจ้าตากสินมหาราช</p>
             </article>
 
-            <article class="place-card">
-                <div class="image-wrapper">
-                    <img src="images/place6.jpg" alt=" สวนผลไม้ ">
+            <article class="col">
+                <div class="place-card">
+                    <div class="image-wrapper">
+                        <img src="images/place6.jpg" alt=" สวนผลไม้ ">
+                    </div>
+                    <h2>สวนผลไม้</h2>
+                    <p>แหล่งผลไม้สดและอร่อย มีทุเรียน มังคุด และเงาะให้เลือกชิม</p>
                 </div>
-                <h2>สวนผลไม้</h2>
-                <p>แหล่งผลไม้สดและอร่อย มีทุเรียน มังคุด และเงาะให้เลือกชิม</p>
             </article>
 
-            <article class="place-card">
-                <div class="image-wrapper">
-                    <img src="images/place7.jpg" alt=" คุกขี้ไก่ ">
+            <article class="col">
+                <div class="place-card">
+                    <div class="image-wrapper">
+                        <img src="images/place7.jpg" alt=" คุกขี้ไก่ ">
+                    </div>
+                    <h2>คุกขี้ไก่</h2>
+                    <p>แหล่งประวัติศาสตร์ในยุคสมัยกรุงธนบุรี เป็นคุกที่มีเรื่องราวน่าสนใจ</p>
                 </div>
-                <h2>คุกขี้ไก่</h2>
-                <p>แหล่งประวัติศาสตร์ในยุคสมัยกรุงธนบุรี เป็นคุกที่มีเรื่องราวน่าสนใจ</p>
             </article>
 
-            <article class="place-card">
-                <div class="image-wrapper">
-                    <img src="images/place8.jpg" alt=" เขาคิชฌกูฏ ">
+            <article class="col">
+                <div class="place-card">
+                    <div class="image-wrapper">
+                        <img src="images/place8.jpg" alt=" เขาคิชฌกูฏ ">
+                    </div>
+                    <h2>เขาคิชฌกูฏ</h2>
+                    <p>สถานที่ศักดิ์สิทธิ์สำหรับการแสวงบุญ พร้อมทิวทัศน์ที่งดงาม</p>
                 </div>
-                <h2>เขาคิชฌกูฏ</h2>
-                <p>สถานที่ศักดิ์สิทธิ์สำหรับการแสวงบุญ พร้อมทิวทัศน์ที่งดงาม</p>
             </article>
-
         </div>
     </main>
 
     <footer>
         <p>&copy; 2024 จังหวัดจันทบุรี | เว็บไซต์แนะนำสถานที่ท่องเที่ยว</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
